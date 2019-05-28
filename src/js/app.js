@@ -6,9 +6,26 @@ const cryptoApi = new cryptoAPI();
 
 
 
+function readCurrency() {
+	const currencyValue = ui.currencySelect.value;
+	const cryptoCurrencyValue = ui.cryptoCurrencySelect.value;
+
+		if(currencyValue === '' || cryptoCurrencyValue === '') {
+			console.log('error')
+		}
+		else {
+			console.log('success')
+		}
+	console.log(currencyValue, cryptoCurrencyValue)
+}
+
+function getSelects(event) {
+		readCurrency();
+		event.preventDefault();
+}
 
 function subscribe() {
-
+		ui.form.addEventListener('submit', getSelects);
 }
 
 export function init() {
