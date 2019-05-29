@@ -6,6 +6,7 @@ export  class UI {
 		this.form = document.querySelector('#form');
 		this.currencySelect = document.querySelector('#currency');
 		this.cryptoCurrencySelect = document.querySelector('#cryptocurrency');
+		this.messageDiv = document.querySelector('.messages');
 		this.init();
 
 	}
@@ -29,4 +30,20 @@ export  class UI {
 			})
 			.catch( err => console.log(err));
 	}
+	printMessage(message, className) {
+			const div = document.createElement('div');
+			div.className = className;
+			div.appendChild(document.createTextNode(message));
+			this.messageDiv.appendChild(div);
+			this.removeErrorMessage();
+
+	}
+	
+	removeErrorMessage() {
+		setTimeout( () => {
+				document.querySelector('.messages div').remove();
+		}, 3000)
+	}
+
+
 }

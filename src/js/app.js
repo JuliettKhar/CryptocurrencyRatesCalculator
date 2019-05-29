@@ -11,12 +11,13 @@ function readCurrency() {
 	const cryptoCurrencyValue = ui.cryptoCurrencySelect.value;
 
 		if(currencyValue === '' || cryptoCurrencyValue === '') {
-			console.log('error')
+			ui.printMessage('Please, fill in all fields', 'deep-orange darken-4 card-panel');
+			// console.log('error')
 		}
 		else {
-			console.log('success')
+			cryptoApi.queryAPI(currencyValue, cryptoCurrencyValue);
 		}
-	console.log(currencyValue, cryptoCurrencyValue)
+	// console.log(currencyValue, cryptoCurrencyValue)
 }
 
 function getSelects(event) {
