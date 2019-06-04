@@ -1,2 +1,6 @@
 import * as app from './app';
-app.init();
+document.addEventListener("DOMContentLoaded",function(){
+
+    //here code
+    app.init();
+});

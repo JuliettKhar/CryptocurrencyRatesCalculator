@@ -1,5 +1,5 @@
 import { UI } from './ui';
-import { cryptoAPI } from './cryptoApi';
+import { cryptoAPI } from './cryptoApiCoinmarket';
 
 const ui = new UI();
 const cryptoApi = new cryptoAPI();

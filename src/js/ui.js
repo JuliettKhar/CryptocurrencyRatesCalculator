@@ -1,4 +1,4 @@
-import { cryptoAPI } from './cryptoApi';
+import { cryptoAPI } from './cryptoApiCoinmarket';
 const cryptoApi = new cryptoAPI();
 
 export  class UI {
